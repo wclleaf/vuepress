@@ -62,7 +62,10 @@
     <Buttons
       ref="buttons"
       @toggle-theme-mode="toggleThemeMode"
+	  @showLive2d="showLive2d"
     />
+	
+	<Live2d direction="left" ref="live2d"/>
 
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
   </div>
@@ -79,6 +82,7 @@ import Sidebar from '@theme/components/Sidebar.vue'
 import Buttons from '@theme/components/Buttons.vue'
 import Footer from '@theme/components/Footer'
 import BodyBgImg from '@theme/components/BodyBgImg'
+import Live2d from '@theme/components/Live2d'
 import { resolveSidebarItems } from '../util'
 import storage from 'good-storage' // 本地存储
 import _ from 'lodash'
@@ -87,7 +91,7 @@ const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
 const NAVBAR_HEIGHT = 58 // 导航栏高度
 
 export default {
-  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar, Footer, Buttons, BodyBgImg },
+  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar, Footer, Buttons, BodyBgImg, Live2d },
 
   data () {
     return {
@@ -277,7 +281,11 @@ export default {
           this.toggleSidebar(false)
         }
       }
-    }
+    },
+	
+	showLive2d () {
+		this.$refs.live2d.open();
+	}
   }
 }
 </script>

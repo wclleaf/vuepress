@@ -60,37 +60,38 @@ module.exports = {
     sidebar: 'structuring', // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
     author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
-      name: '王成林', // 必需
-      link: 'https://codeup.aliyun.com/5f9676349cffa29cfdd3c482' // 可选的
+      name: 'kros', // 必需
+      // link: 'https://codeup.aliyun.com/kros/' // 可选的
+	  // link: 'https://gitee.com/ll_lin'
     },
     blogger: { // 博主信息，显示在首页侧边栏
-      avatar: 'https://chenglin.online/blog/logo.jpg',
+      avatar: 'http://qiniu.chenglin.online/image/logo.jpg',
       name: 'Kros',
-      slogan: ''
+      slogan: '不断寻找希望，才是真正的希望'
     },
     social: { // 社交图标，显示于博主信息栏和页脚栏
-      // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
+      iconfontCssFile: '//at.alicdn.com/t/font_2180906_jugic8c4cx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
       icons: [
         // {
-        //   iconClass: 'icon-youjian',
-        //   title: '发邮件',
+        //   iconClass: 'icon-enjoy',
+        //   title: '分享',
         //   link: 'mailto:894072666@qq.com'
         // },
-        // {
-        //   iconClass: 'icon-github',
-        //   title: 'GitHub',
-        //   link: 'https://github.com/xugaoyi'
-        // },
-        // {
-        //   iconClass: 'icon-erji',
-        //   title: '听音乐',
-        //   link: 'https://music.163.com/#/playlist?id=755597173'
-        // }
+        {
+          iconClass: 'icon-github',
+          title: 'GitHub',
+          link: 'https://github.com/wclleaf'
+        },
+        {
+          iconClass: 'icon-mayun',
+          title: '码云',
+          link: 'https://gitee.com/ll_lin'
+        }
       ]
     },
     footer: { // 页脚信息
       createYear: 2020, // 博客创建年份
-      copyrightInfo: 'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+      copyrightInfo: 'kros king', // 博客版权信息，支持a标签
     }
   },
   plugins: [ // 插件
@@ -194,31 +195,7 @@ module.exports = {
           return moment(timestamp).format('YYYY/MM/DD, H:MM:SS');
         }
       }
-    ],
-	[
-		'vuepress-plugin-helper-live2d',{
-        live2d: {
-          // 是否启用(关闭请设置为false)(default: true)
-          enable: true,
-          // 模型名称(default: hibiki)>>>取值请参考：
-          // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
-          model: 'hibiki',
-          display: {
-            position: "right", // 显示位置：left/right(default: 'right')
-            width: 135, // 模型的长度(default: 135)
-            height: 300, // 模型的高度(default: 300)
-            hOffset: 65, //  水平偏移(default: 65)
-            vOffset: 0, //  垂直偏移(default: 0)
-          },
-          mobile: {
-            show: false // 是否在移动设备上显示(default: false)
-          },
-          react: {
-            opacity: 0.8 // 模型透明度(default: 0.8)
-          }
-        }
-      }
-	]
+    ]
   ],
   // configureWebpack: {
   //   //webpack别名 如![Image from alias](~@alias/image.png)

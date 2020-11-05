@@ -9,7 +9,7 @@ const yamlToJs = require('yamljs')
 const inquirer = require('inquirer') // 命令行操作
 const chalk = require('chalk') // 命令行打印美化
 const readFileList = require('./modules/readFileList');
-const { type, repairDate} = require('./modules/fn');
+const { type, repairDate, dateFormat} = require('./modules/fn');
 const log = console.log
 
 const configPath = path.join(__dirname, 'config.yml') // 配置文件的路径
@@ -82,7 +82,10 @@ async function main() {
     if (mark) {
       if(matterData.date && type(matterData.date) === 'date') {
         matterData.date = repairDate(matterData.date) // 修复时间格式
-      }
+      }else {
+		  // 添加时间
+		  matterData.date = dateFormat(new Date());
+	  }
       const newData = jsonToYaml.stringify(matterData).replace(/\n\s{2}/g,"\n").replace(/"/g,"")  + '---\r\n' + fileMatterObj.content;
       fs.writeFileSync(file.filePath, newData); // 写入
       log(chalk.green(`update frontmatter：${file.filePath} `))

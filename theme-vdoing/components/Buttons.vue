@@ -14,6 +14,11 @@
       v-show="showCommentBut"
       @click="scrollToComment"
     />
+	<div
+	  title="看板娘!"
+	  class="button blur iconfont icon-katong"
+	  @click="showLive2d"
+	 />
     <div
       title="主题模式"
       class="button blur theme-mode-but iconfont icon-zhuti"
@@ -168,6 +173,10 @@ export default {
         this._handleFocus()
       }
     },
+	
+	showLive2d () {
+		this.$emit('showLive2d');
+	},
 
     _handleListener () {
       clearTimeout(this._scrollTimer)
