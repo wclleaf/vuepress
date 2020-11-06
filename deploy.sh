@@ -8,7 +8,7 @@ npm run build
 
 git add -A
 git commit -m "代码更新"
-git push -f https://codeup.aliyun.com/kros/ll_lin/deploy-test.git master
+git push -f https://codeup.aliyun.com/kros/ll_lin/theme-vdoing-blog.git master
 
 
 # 进入生成的文件夹

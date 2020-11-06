@@ -7,6 +7,8 @@
 
 <script>
 import { type } from '../util'
+import axios from 'axios'
+
 export default {
   data () {
     return {
@@ -15,27 +17,33 @@ export default {
     }
   },
   mounted () {
-    let { bodyBgImg, bodyBgImgOpacity } = this.$themeConfig
+	  const url = 'https://v1.alapi.cn/api/acg';
+	  axios.get(url).then((res) => {
+	    console.log(res);
+	  }).catch(function (err) {
+	    console.log(err)
+	  })
+    // let { bodyBgImg, bodyBgImgOpacity } = this.$themeConfig
 
-    if (type(bodyBgImg) === 'string') {
-      this.bgImg = bodyBgImg
-    } else if (type(bodyBgImg) === 'array') {
-      let count = 0
-      let timer = null
+    // if (type(bodyBgImg) === 'string') {
+    //   this.bgImg = bodyBgImg
+    // } else if (type(bodyBgImg) === 'array') {
+    //   let count = 0
+    //   let timer = null
 
-      this.bgImg = bodyBgImg[count]
-      clearInterval(timer)
-      timer = setInterval(() => {
-        if (++count >= bodyBgImg.length) {
-          count = 0
-        }
-        this.bgImg = bodyBgImg[count]
-      }, 15000);
-    }
+    //   this.bgImg = bodyBgImg[count]
+    //   clearInterval(timer)
+    //   timer = setInterval(() => {
+    //     if (++count >= bodyBgImg.length) {
+    //       count = 0
+    //     }
+    //     this.bgImg = bodyBgImg[count]
+    //   }, 15000);
+    // }
 
-    if (bodyBgImgOpacity !== undefined) {
-      this.opacity = bodyBgImgOpacity
-    }
+    // if (bodyBgImgOpacity !== undefined) {
+    //   this.opacity = bodyBgImgOpacity
+    // }
 
   }
 }
