@@ -17,12 +17,14 @@ export default {
     }
   },
   mounted () {
-	  const url = 'https://v1.alapi.cn/api/acg';
+	  // const url = 'https://v1.alapi.cn/api/acg';
+	  const url = '//acg.yanwz.cn/api.php';
 	  axios.get(url).then((res) => {
 	    console.log(res);
 	  }).catch(function (err) {
 	    console.log(err)
 	  })
+	  // console.log('bodyBgImg');
     // let { bodyBgImg, bodyBgImgOpacity } = this.$themeConfig
 
     // if (type(bodyBgImg) === 'string') {

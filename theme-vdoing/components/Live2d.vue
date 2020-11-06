@@ -178,12 +178,10 @@ export default {
 	  let groupName = this.modelComb[this.groupId].name;
 	  if(this.groupId == 0){
 		  const url = `/live2d/model/${groupName}/${modelName}/assets/${modelName}.model.json`;
-		  let x = window.loadlive2d(this.live2dMainId, url);
-		  console.log(x);
+		  window.loadlive2d(this.live2dMainId, url);
 	  }else {
 		  const url = `/live2d/model/${groupName}/${modelName}/index.json`;
-		  let x = window.loadlive2d(this.live2dMainId, url);
-		  console.log(x);
+		  window.loadlive2d(this.live2dMainId, url);
 	  }
 	  
 	  // window.loadlive2d(live2dMainId, '/live2d/model/HyperdimensionNeptunia/blanc_classic/index.json');
