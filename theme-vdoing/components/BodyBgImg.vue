@@ -17,15 +17,9 @@ export default {
     }
   },
   mounted () {
-	  // const url = 'https://v1.alapi.cn/api/acg';
-	  const url = '//acg.yanwz.cn/api.php';
-	  axios.get(url).then((res) => {
-	    console.log(res);
-	  }).catch(function (err) {
-	    console.log(err)
-	  })
-	  // console.log('bodyBgImg');
-    // let { bodyBgImg, bodyBgImgOpacity } = this.$themeConfig
+    let {  bodyBgImgOpacity } = this.$themeConfig
+	
+	this.bgImg = 'https://v1.alapi.cn/api/acg'
 
     // if (type(bodyBgImg) === 'string') {
     //   this.bgImg = bodyBgImg
@@ -42,10 +36,10 @@ export default {
     //     this.bgImg = bodyBgImg[count]
     //   }, 15000);
     // }
-
-    // if (bodyBgImgOpacity !== undefined) {
-    //   this.opacity = bodyBgImgOpacity
-    // }
+	console.log(this.$themeConfig);
+    if (bodyBgImgOpacity != undefined) {
+      this.opacity = bodyBgImgOpacity
+    }
 
   }
 }
