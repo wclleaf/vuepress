@@ -20,9 +20,6 @@
           @click="tool.click"/>
       </div>
     </div>
-    <!-- <div class="vue-live2d-toggle" ref="vue-live2d-toggle" v-show="!mainShow" @click="mainShow = true">
-      <span>哈罗-看板娘</span>
-    </div> -->
   </div>
 </template>
 
@@ -235,8 +232,8 @@ export default {
 		this.mainShow = true;
 	},
     close () {
-      this.mainShow = false;
-	  // this.$emit('close');
+      // this.mainShow = false;
+	  this.$emit('close');
     },
     loadEvent () {
       for (const event in this.tips) {

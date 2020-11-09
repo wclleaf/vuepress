@@ -17,26 +17,24 @@ export default {
     }
   },
   mounted () {
-    let {  bodyBgImgOpacity } = this.$themeConfig
+    let { bodyBgImg, bodyBgImgOpacity } = this.$themeConfig
 	
-	this.bgImg = 'https://v1.alapi.cn/api/acg'
+	if (type(bodyBgImg) === 'string') {
+		this.bgImg = 'https://v1.alapi.cn/api/acg'
+	} else if (type(bodyBgImg) === 'array') {
+      let count = 0
+      let timer = null
 
-    // if (type(bodyBgImg) === 'string') {
-    //   this.bgImg = bodyBgImg
-    // } else if (type(bodyBgImg) === 'array') {
-    //   let count = 0
-    //   let timer = null
-
-    //   this.bgImg = bodyBgImg[count]
-    //   clearInterval(timer)
-    //   timer = setInterval(() => {
-    //     if (++count >= bodyBgImg.length) {
-    //       count = 0
-    //     }
-    //     this.bgImg = bodyBgImg[count]
-    //   }, 15000);
-    // }
-	console.log(this.$themeConfig);
+      this.bgImg = bodyBgImg[count]
+      clearInterval(timer)
+      timer = setInterval(() => {
+        if (++count >= bodyBgImg.length) {
+          count = 0
+        }
+        this.bgImg = bodyBgImg[count]
+      }, 15000);
+    }
+	
     if (bodyBgImgOpacity != undefined) {
       this.opacity = bodyBgImgOpacity
     }

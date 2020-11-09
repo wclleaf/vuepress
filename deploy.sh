@@ -6,6 +6,7 @@ set -e
 # 生成静态文件
 npm run build
 
+# push to blog
 git add -A
 git commit -m "代码更新"
 git push -f https://codeup.aliyun.com/kros/ll_lin/theme-vdoing-blog.git master

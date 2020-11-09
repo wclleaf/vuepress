@@ -65,7 +65,7 @@
 	  @showLive2d="showLive2d"
     />
 	
-	<Live2d direction="left" ref="live2d"/>
+	<Live2d direction="left" ref="live2d" @close="closeLive2d"/>
 
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
   </div>
@@ -285,6 +285,10 @@ export default {
 	
 	showLive2d () {
 		this.$refs.live2d.open();
+	},
+	
+	closeLive2d () {
+		this.$refs.buttons.showKanBan = true;
 	}
   }
 }

@@ -15,6 +15,7 @@
       @click="scrollToComment"
     />
 	<div
+	  v-show="showKanBan"
 	  title="看板娘!"
 	  class="button blur iconfont icon-katong"
 	  @click="showLive2d"
@@ -61,6 +62,7 @@ export default {
       commentTop: null,
       currentMode: null,
       showModeBox: false,
+	  showKanBan: false,
       modeList: [
         {
           name: '跟随系统',
@@ -176,6 +178,7 @@ export default {
 	
 	showLive2d () {
 		this.$emit('showLive2d');
+		this.showKanBan = false;
 	},
 
     _handleListener () {
