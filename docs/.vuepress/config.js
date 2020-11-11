@@ -63,7 +63,7 @@ module.exports = {
 	  // link: 'https://gitee.com/ll_lin'
     },
     blogger: { // 博主信息，显示在首页侧边栏
-      avatar: 'http://qiniu.chenglin.online/image/logo.jpg',
+      avatar: 'https://oss.chenglin.online/blog/logo.jpg',
       name: 'Kros',
       slogan: '不断寻找希望，才是真正的希望'
     },
