@@ -84,6 +84,7 @@ export default {
       const { sidebar } = this.$site.themeConfig
       const key = this.$frontmatter.pageComponent.data.key
       const catalogueList = sidebar[`/${key}/`]
+	  console.log(this.$site.themeConfig, key);
 
       if (!catalogueList) {
         console.error('未获取到目录数据，请查看front matter中设置的key是否正确。')
