@@ -13,7 +13,7 @@ export default {
   }],
   mouseover: [{
     selector: '.vue-live2d-tool .icon-enjoy',
-    texts: ['猜猜我要说些什么？', '欣赏一些有意思的短句？']
+    texts: ['听，我说了什么？', 'hasaki']
   }, {
     selector: '.vue-live2d-tool .icon-home',
     texts: ['想看看我的朋友们吗？']

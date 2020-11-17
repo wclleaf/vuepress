@@ -68,6 +68,8 @@
 	<Live2d direction="left" ref="live2d" @close="closeLive2d"/>
 
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
+	
+	<audio src="" ref="BgMusic"></audio>
   </div>
 </template>
 

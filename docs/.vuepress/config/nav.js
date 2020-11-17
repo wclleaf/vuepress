@@ -1,14 +1,18 @@
 module.exports = [
   {text: '首页', link: '/'},
   {
-	  text: 'uniapp',
-	  link: '/uniapp/'
+	  text: '前端',
+	  link: '/front-end/',
+	  items: [
+		  {text: '工具', link:'/pages/aeb619/'}
+	  ]
   },
   {
-    text: '日记',
+    text: '随笔',
     link: '/topic/',
     items: [
-      {text: '算法', link: '/pages/55845d/'}
+      {text: '算法', link: '/pages/55845d/'},
+	  {text: '折腾笔记', link: '/pages/b48b9b/'}
     ]
   },
   {

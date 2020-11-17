@@ -81,7 +81,7 @@ export default {
         click: this.openHomePage
       }, {
 		  name: 'iconfont icon-enjoy',
-		  click: this.showSaying
+		  click: this.showHitokoto
 	  }, {
 		name: 'iconfont icon-skin',
 		click: this.loadRandModel
@@ -207,8 +207,9 @@ export default {
       window.Live2D.captureName = 'photo.png'
       window.Live2D.captureFrame = true
     },
-    showHitokoto () {
-      const url = 'https://v1.hitokoto.cn'
+    showHitokoto () {		
+		// https://developer.hitokoto.cn/
+      const url = 'https://v1.hitokoto.cn?c=c&max_length=20'
       axios.get(url).then((res) => {
         const { hitokoto, id, creator } = res.data
         this.showMessage(`${hitokoto} <br> - by <a href="https://hitokoto.cn?id=${id}">${creator}</a> from 《${res.data.from} 》`)
@@ -263,6 +264,7 @@ export default {
 	  }
 /* live2d */
 .vue-live2d {
+	z-index: 1000;
 	position: fixed;
 	bottom: 0;
   transform: translateY(0);
@@ -307,12 +309,7 @@ export default {
   color: var(--textColor);
   text-align: center;
   cursor: pointer;
-}
-.vue-live2d-tool-on-left {
-  left: -18px;
-}
-.vue-live2d-tool-on-right {
-  right: -18px;
+  right: -10px;
 }
 .vue-live2d-tool span {
   display: block;
