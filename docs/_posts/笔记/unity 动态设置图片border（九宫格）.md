@@ -6,7 +6,7 @@ sidebar: auto
 categories:
   - 随笔
 tags:
-  - 
+  - unity
 ---
 
 ####  我们一般是在编辑器里打开Sprite Editor设置图片的border，border用vector4表示为：Vector4(right, top, left, bottom)。但在程序运行过程中border就固定了，如果我们想修改Border可以使用unity里面提供一个方法==Sprite.Create==
