@@ -11,7 +11,7 @@ tags:
 
 ####  我们一般是在编辑器里打开Sprite Editor设置图片的border，border用vector4表示为：Vector4(right, top, left, bottom)。但在程序运行过程中border就固定了，如果我们想修改Border可以使用unity里面提供一个方法==Sprite.Create==
 
-```c#
+```csharp
 //Sprite提供一个静态的方法构建sprite的时候重置border（最后一个参数）
 public static Sprite Create(Texture2D texture, Rect rect, Vector2 pivot, [DefaultValue("100.0f")] float pixelsPerUnit, [DefaultValue("0")] uint extrude, [DefaultValue("SpriteMeshType.Tight")] SpriteMeshType meshType, [DefaultValue("Vector4.zero")] Vector4 border);
 Image ImgBG = GetComponent<Image>();
