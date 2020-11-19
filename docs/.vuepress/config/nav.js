@@ -4,6 +4,7 @@ module.exports = [
 	  text: '前端',
 	  link: '/front-end/',
 	  items: [
+		  {text: 'CSS', link: '/pages/28c62d/'},
 		  {text: '工具', link:'/pages/aeb619/'}
 	  ]
   },
