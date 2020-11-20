@@ -5,7 +5,8 @@ module.exports = [
 	  link: '/front-end/',
 	  items: [
 		  {text: 'CSS', link: '/pages/28c62d/'},
-		  {text: '工具', link:'/pages/aeb619/'}
+		  {text: '工具', link:'/pages/aeb619/'},
+		  {text: 'Vue', link: '/pages/a0e944/'}
 	  ]
   },
   {
