@@ -41,11 +41,6 @@ export default {
       default: '',
       type: String
     },
-    apiPath: {
-      default: 'https://live2d.fghrsh.net/api',
-	  // default: 'https://github.com/fghrsh/live2d_api',
-      type: String
-    },
     homePage: {
       default: 'https://github.com/evgo2017/vue-live2d',
       type: String

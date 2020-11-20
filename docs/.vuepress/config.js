@@ -22,8 +22,8 @@ module.exports = {
     nav,
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/kros-logo.png', // 导航栏logoY
-    repo: 'https://codeup.aliyun.com/kros/ll_lin/deploy-test.git', // 导航栏右侧生成Github链接
-	repoLabel: '云效codeup',
+    repo: 'https://gitee.com/wclcc/vuepres-blog.git', // 导航栏右侧生成Github链接
+	repoLabel: '码云',
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
