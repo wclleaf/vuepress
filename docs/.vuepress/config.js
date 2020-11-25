@@ -71,11 +71,6 @@ module.exports = {
       iconfontCssFile: '//at.alicdn.com/t/font_2180906_jugic8c4cx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
       icons: [
         {
-          iconClass: 'icon-github',
-          title: 'GitHub',
-          link: 'https://github.com/wclleaf'
-        },
-        {
           iconClass: 'icon-mayun',
           title: '码云',
           link: 'https://gitee.com/ll_lin'

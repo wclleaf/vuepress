@@ -27,6 +27,7 @@ git push -f 你的git地址 master
 
 
 感谢
+
 [vdoing主题](https://github.com/xugaoyi/vuepress-theme-vdoing)
 
 [vue 看板娘](https://github.com/evgo2017/vue-live2d)
