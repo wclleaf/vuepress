@@ -228,7 +228,7 @@ export default {
 		this.mainShow = true;
 	},
     close () {
-      // this.mainShow = false;
+      this.mainShow = false;
 	  this.$emit('close');
     },
     loadEvent () {

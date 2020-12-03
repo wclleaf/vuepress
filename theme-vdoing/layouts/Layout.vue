@@ -70,6 +70,8 @@
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
 	
 	<audio src="" ref="BgMusic"></audio>
+	
+	<div id="gitalk-container" style="padding: 0 50px;"></div>
   </div>
 </template>
 
@@ -88,6 +90,8 @@ import Live2d from '@theme/components/Live2d'
 import { resolveSidebarItems } from '../util'
 import storage from 'good-storage' // 本地存储
 import _ from 'lodash'
+import 'gitalk/dist/gitalk.css'
+import Gitalk from 'gitalk'
 
 const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
 const NAVBAR_HEIGHT = 58 // 导航栏高度
@@ -191,7 +195,7 @@ export default {
     }
   },
   mounted () {
-
+	
     // 初始化页面时链接锚点无法跳转到指定id的解决方案
     const hash = document.location.hash;
     if (hash.length > 1) {
@@ -218,8 +222,20 @@ export default {
         }
         setTimeout(() => { t = p }, 0)
       }
-    }, 300))
-
+    }, 300));
+	
+	const gitalk = new Gitalk({
+	  clientID: 'e1f4239ff1a4fcf759ca',
+	  clientSecret: 'bdffe02b197df65043e8ebd3f7390e45a50e72b1',
+	  repo: 'jspace-comment',      // The repository of store comments,
+	  owner: 'UnknownSaltFish',
+	  admin: ['UnknownSaltFish'],
+	  id: '123',      // Ensure uniqueness and length less than 50
+	  distractionFreeMode: true,  // Facebook-like distraction free mode
+	  number: 1
+	})
+	
+	gitalk.render('gitalk-container')
   },
   watch: {
     isSidebarOpen () {
