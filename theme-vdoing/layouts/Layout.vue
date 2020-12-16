@@ -71,7 +71,7 @@
 	
 	<audio src="" ref="BgMusic"></audio>
 	
-	<div id="gitalk-container" style="padding: 0 50px;"></div>
+	<!-- <div id="gitalk-container" style="padding: 0 50px;"></div> -->
   </div>
 </template>
 
@@ -224,18 +224,18 @@ export default {
       }
     }, 300));
 	
-	const gitalk = new Gitalk({
-	  clientID: 'e1f4239ff1a4fcf759ca',
-	  clientSecret: 'bdffe02b197df65043e8ebd3f7390e45a50e72b1',
-	  repo: 'jspace-comment',      // The repository of store comments,
-	  owner: 'UnknownSaltFish',
-	  admin: ['UnknownSaltFish'],
-	  id: '123',      // Ensure uniqueness and length less than 50
-	  distractionFreeMode: true,  // Facebook-like distraction free mode
-	  number: 1
-	})
+	// const gitalk = new Gitalk({
+	//   clientID: 'e1f4239ff1a4fcf759ca',
+	//   clientSecret: 'bdffe02b197df65043e8ebd3f7390e45a50e72b1',
+	//   repo: 'jspace-comment',      // The repository of store comments,
+	//   owner: 'UnknownSaltFish',
+	//   admin: ['UnknownSaltFish'],
+	//   id: '123',      // Ensure uniqueness and length less than 50
+	//   distractionFreeMode: true,  // Facebook-like distraction free mode
+	//   number: 1
+	// })
 	
-	gitalk.render('gitalk-container')
+	// gitalk.render('gitalk-container')
   },
   watch: {
     isSidebarOpen () {
