@@ -1,5 +1,5 @@
 ---
-title: race检察请求超时
+title: race检查请求超时
 date: 2021-01-05 16:27:34
 permalink: /pages/af00fc/
 sidebar: auto
