@@ -38,7 +38,7 @@ module.exports = {
     // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
 	// 使用网图
-    bodyBgImg: 'https://v1.alapi.cn/api/acg',
+    bodyBgImg: 'https://v1.alapi.cn/api/acg?token=9IbGN4Th4fLiVCEH',
     bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
     // titleBadge: false, // 文章标题前的图标是否显示，默认true
@@ -174,7 +174,16 @@ module.exports = {
           return moment(timestamp).format('YYYY/MM/DD, H:MM:SS');
         }
       }
-    ]
+    ],
+	 ["sakura", {
+	        num: 20,  // 默认数量
+	        show: true, //  是否显示
+	        zIndex: 1000,   // 层级
+	        img: {
+	          replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
+	          httpUrl: '...'     // 绝对路径
+	        }     
+	    }]
   ],
   // configureWebpack: {
   //   //webpack别名 如![Image from alias](~@alias/image.png)

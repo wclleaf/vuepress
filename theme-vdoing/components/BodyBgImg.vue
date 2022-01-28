@@ -20,7 +20,8 @@ export default {
     let { bodyBgImg, bodyBgImgOpacity } = this.$themeConfig
 	
 	if (type(bodyBgImg) === 'string') {
-		this.bgImg = 'https://v1.alapi.cn/api/acg'
+		// this.bgImg = 'https://v1.alapi.cn/api/acg?token=9IbGN4Th4fLiVCEH'
+    this.bgImg = 'https://yingciyuan.cn/pc.php';
 	} else if (type(bodyBgImg) === 'array') {
       let count = 0
       let timer = null
