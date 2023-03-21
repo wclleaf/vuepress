@@ -6,7 +6,8 @@ module.exports = [
 	  items: [
 		  {text: 'CSS', link: '/pages/28c62d/'},
 		  {text: '工具', link:'/pages/aeb619/'},
-		  {text: 'Vue', link: '/pages/a0e944/'}
+		  {text: 'Vue', link: '/pages/a0e944/'},
+			{text: 'js', link: '/pages/8fbca3/'},
 	  ]
   },
   {

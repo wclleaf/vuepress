@@ -1,0 +1,4 @@
+vue2中使用`$mount`和`extend`实时挂载组件到全局，具体可以参考 
+[使用$mount和extend扩展vue](/pages/dbf704/)
+
+在vue3中提供了一个更为方便的函数`createApp`
