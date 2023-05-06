@@ -38,7 +38,8 @@ module.exports = {
     // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
 	// 使用网图
-    bodyBgImg: 'https://v1.alapi.cn/api/acg?token=9IbGN4Th4fLiVCEH',
+    bodyBgImg: 'https://api.yimian.xyz/img?type=moe',
+		// 备用api：1、http://www.dmoe.cc/random.php 2、https://img.xjh.me/random_img.php 3、https://api.ghser.com/random/api.php 4、https://api.yimian.xyz/img?type=moe
     bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
     // titleBadge: false, // 文章标题前的图标是否显示，默认true
