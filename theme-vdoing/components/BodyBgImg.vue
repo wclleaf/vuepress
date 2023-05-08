@@ -21,7 +21,7 @@ export default {
 	
 	if (type(bodyBgImg) === 'string') {
 		// this.bgImg = 'https://v1.alapi.cn/api/acg?token=9IbGN4Th4fLiVCEH'
-    this.bgImg = 'https://yingciyuan.cn/pc.php';
+    this.bgImg = 'https://api.yimian.xyz/img?type=moe';
 	} else if (type(bodyBgImg) === 'array') {
       let count = 0
       let timer = null
