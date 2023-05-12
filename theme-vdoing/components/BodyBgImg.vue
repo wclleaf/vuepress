@@ -22,6 +22,7 @@ export default {
 	if (type(bodyBgImg) === 'string') {
 		// this.bgImg = 'https://v1.alapi.cn/api/acg?token=9IbGN4Th4fLiVCEH'
     this.bgImg = 'https://api.yimian.xyz/img?type=moe';
+		//备用api：1、http://www.dmoe.cc/random.php 2、https://img.xjh.me/random_img.php 3、https://api.ghser.com/random/api.php 4、https://api.yimian.xyz/img?type=moe
 	} else if (type(bodyBgImg) === 'array') {
       let count = 0
       let timer = null
