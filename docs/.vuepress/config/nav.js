@@ -19,6 +19,13 @@ module.exports = [
     ]
   },
   {
+    text: '一言',
+    link: '/think/',
+    items: [
+      
+    ]
+  },
+  {
     text: '索引',
     link: '/archives/',
     items: [
