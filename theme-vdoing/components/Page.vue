@@ -25,6 +25,8 @@
 
         <PageEdit />
         <PageNav v-bind="{ sidebarItems }" />
+        
+        <!-- <Vssue :title="$title" /> -->
       </div>
 
       <UpdateArticle
@@ -32,8 +34,8 @@
         :moreArticle="updateBarConfig && updateBarConfig.moreArticle"
         v-if="isShowUpdateBar"
       />
-
-      <slot name="bottom" />
+      
+      <slot name="bottom" />      
     </main>
   </div>
 </template>

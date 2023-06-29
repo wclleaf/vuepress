@@ -70,6 +70,8 @@
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
 	
 	<audio src="" ref="BgMusic"></audio>
+
+  <!-- <Vssue/> -->
 	
 	<!-- <div id="gitalk-container" style="padding: 0 50px;"></div> -->
   </div>

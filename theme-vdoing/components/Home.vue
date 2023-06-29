@@ -5,16 +5,18 @@
       class="banner"
       :class="{'hide-banner': !showBanner}"
       :style="bannerBgStyle"
+			style="display: flex; align-items: center;"
     >
       <div
         class="banner-conent"
-        :style="!homeData.features && !homeData.heroImage && `padding-top: 7rem`"
+        :style="!homeData.features && !homeData.heroImage"
       >
         <header class="hero">
           <img
             v-if="homeData.heroImage"
             :src="$withBase(homeData.heroImage)"
             :alt="homeData.heroAlt"
+						style="border-radius: 4px;"
           />
           <h1
             v-if="homeData.heroText"
@@ -353,7 +355,7 @@ export default {
 .home-wrapper
   .banner
     width 100%
-    min-height 450px
+    height calc(100vh - 3.6rem)
     margin-top $navbarHeight
     color $bannerTextColor
     position relative
@@ -369,7 +371,7 @@ export default {
         margin-top 3rem
         img
           max-width 100%
-          max-height 240px
+          max-height 200px
           display block
           margin 2rem auto 1.5rem
         h1
@@ -522,6 +524,11 @@ export default {
       .banner-conent
         .features
           display none !important
+    .main-wrapper
+      .main-left
+        .post-list
+          margin-left 1rem
+          margin-right 1rem          
 // 419px以下
 @media (max-width $MQMobileNarrow)
   .home-wrapper

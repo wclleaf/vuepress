@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /img/web.png
+heroImage: http://oss.chenglin.online/blog/wechat
 heroText: kros的博客
 tagline: 每一天都是一个新的开始
 # actionText: 立刻进入 →

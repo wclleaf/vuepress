@@ -39,7 +39,7 @@ module.exports = {
     // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
 	// 使用网图
-    bodyBgImg: 'https://api.yimian.xyz/img?type=moe',
+    bodyBgImg: 'https://api.ghser.com/random/api.php',
 		// 备用api：1、http://www.dmoe.cc/random.php 2、https://img.xjh.me/random_img.php 3、https://api.ghser.com/random/api.php 4、https://api.yimian.xyz/img?type=moe
     bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
@@ -177,7 +177,7 @@ module.exports = {
         }
       }
     ],
-	 ["sakura", {
+	  ["sakura", {
 	        num: 20,  // 默认数量
 	        show: true, //  是否显示
 	        zIndex: -1,   // 层级
@@ -185,8 +185,15 @@ module.exports = {
 	          replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
 	          httpUrl: '...'     // 绝对路径
 	        }     
-	    }]
-  ],
+	    }],
+    ["@vssue/vuepress-plugin-vssue", {
+      platform: 'gitee',
+      owner: 'wclcc',
+      repo: 'vuepressdemo',
+      clientId: '777806700a3ccc5f54dc3b58c73b1221e156d45fda6f6d3ddd4a837d07a7fca7',
+      clientSecret: '9bad67e6667fdb42e10d1d859fe9f7d19574924d863aba1a05686ae315349d4a'
+    }]
+  ]
   // configureWebpack: {
   //   //webpack别名 如![Image from alias](~@alias/image.png)
   //   resolve: {
