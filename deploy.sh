@@ -21,7 +21,7 @@ git add -A
 git commit -m "部署更新"
 # git push -f https://codeup.aliyun.com/kros/ll_lin/deploy-test.git master
 git push -f https://gitee.com/wclcc/deploy-codeup.git master
-curl --header "Content-Type: application/json" --request POST --data '{}' http://flow-openapi.aliyun.com/pipeline/webhook/7sUxOuMAPSoor7acp4gE  # 触发部署流水线
+curl --header "Content-Type: application/json" --request POST --data '{}' https://api.render.com/deploy/srv-ciqa4nmnqql4qa4pk0sg?key=rCrtI40wjIU  # 触发部署流水线
 
 
 cd - # 退回开始所在目录
