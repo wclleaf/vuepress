@@ -397,7 +397,7 @@ export default {
   position: fixed;
   right: 100px;
   bottom: 40px;
-  background: #eef3f7;
+  background: var(--mainBg);
   width: 360px;
   box-shadow: 0px 8px 15px -2px rgba(50, 88, 130, 0.32);
   border-radius: 8px;
@@ -543,13 +543,13 @@ export default {
   justify-content: space-between;
 }
 .progress__duration {
-  color: #71829e;
+  color: var(--textColor);
   font-weight: 700;
   font-size: 16px;
   opacity: 0.5;
 }
 .progress__time {
-  color: #71829e;
+  color: var(--textColor);
   font-weight: 700;
   font-size: 14px;
   opacity: 0.7;
@@ -572,7 +572,7 @@ export default {
 }
 
 .album-info {
-  color: #71829e;
+  color: var(--textColor);
   flex: 1;
   padding-right: 60px;
   user-select: none;
