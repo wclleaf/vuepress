@@ -20,6 +20,7 @@
 	  class="button blur iconfont icon-katong"
 	  @click="showLive2d"
 	 />
+    <div title="来点音乐!" v-show="!showMusic" class="button blur iconfont icon-music2" @click="showMusicBox"></div>
     <div
       title="主题模式"
       class="button blur theme-mode-but iconfont icon-zhuti"
@@ -63,6 +64,7 @@ export default {
       currentMode: null,
       showModeBox: false,
 	  showKanBan: false,
+    showMusic: false,
       modeList: [
         {
           name: '跟随系统',
@@ -180,6 +182,10 @@ export default {
 		this.$emit('showLive2d');
 		this.showKanBan = false;
 	},
+  showMusicBox() {
+    this.showMusic = !this.showMusic
+    this.$emit('showMusicBox')
+  },
 
     _handleListener () {
       clearTimeout(this._scrollTimer)

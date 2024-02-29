@@ -63,14 +63,14 @@
       ref="buttons"
       @toggle-theme-mode="toggleThemeMode"
 	  @showLive2d="showLive2d"
+    @showMusicBox="showMusic = true"
     />
 	
 	<Live2d direction="left" ref="live2d" @close="closeLive2d"/>
 
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
-	
-	<audio src="" ref="BgMusic"></audio>
 
+    <MusicBox v-show="showMusic" />
   <!-- <Vssue/> -->
 	
 	<!-- <div id="gitalk-container" style="padding: 0 50px;"></div> -->
@@ -94,19 +94,21 @@ import storage from 'good-storage' // 本地存储
 import _ from 'lodash'
 import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
+import MusicBox from '@theme/components/MusicBox.vue'
 
 const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
 const NAVBAR_HEIGHT = 58 // 导航栏高度
 
 export default {
-  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar, Footer, Buttons, BodyBgImg, Live2d },
+  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar, Footer, Buttons, BodyBgImg, Live2d, MusicBox },
 
   data () {
     return {
       hideNavbar: false,
       isSidebarOpen: true,
       showSidebar: false,
-      themeMode: 'light'
+      themeMode: 'light',
+      showMusic: false
     }
   },
   computed: {
