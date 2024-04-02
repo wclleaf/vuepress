@@ -127,6 +127,7 @@
 <script>
   const krosMusicBox = 'kros_music_box'
   import tempList from './temp.js'
+  import storage from 'good-storage' // 本地存储
 export default {
   data() {
     return {
@@ -262,14 +263,15 @@ export default {
           this.currentTrack = this.tracks[this.tracks.length - 1]
           this.currentTrackIndex = this.tracks.length - 1
           this.resetPlayer()
-          localStorage.setItem(krosMusicBox, JSON.stringify(this.tracks))
+          storage.set(krosMusicBox, JSON.stringify(this.tracks))
+          // window.localStorage.setItem(krosMusicBox, JSON.stringify(this.tracks))
         // })
       })
     },
     
     initMusicBox() {
           
-      const music = localStorage.getItem(krosMusicBox)
+      const music = storage.get(krosMusicBox)//window.localStorage.getItem(krosMusicBox)
       if (music && JSON.parse(music).length) {
         this.tracks = JSON.parse(music)
         // this.$forceUpdate()
@@ -294,7 +296,8 @@ export default {
               })
                 this.currentTrack = this.tracks[0]
                 // this.audio.src = this.currentTrack.source
-                localStorage.setItem(krosMusicBox, JSON.stringify(this.tracks))
+                // window.localStorage.setItem(krosMusicBox, JSON.stringify(this.tracks))
+                storage.set(krosMusicBox, JSON.stringify(this.tracks))
               console.log(this.tracks)
             }
           // })  
@@ -313,12 +316,12 @@ export default {
         //   })  
         //   this.currentTrack = this.tracks[0]
         //   this.audio.src = this.currentTrack.source
-        //   localStorage.setItem(krosMusicBox, JSON.stringify(this.tracks))
+        //   window.localStorage.setItem(krosMusicBox, JSON.stringify(this.tracks))
         // })
       }
     }
   },
-  created() {
+  beforeMount() {
     this.initMusicBox()
     let vm = this;
     // this.currentTrack = this.tracks[0];
