@@ -14,7 +14,7 @@
         <header class="hero">
           <img
             v-if="homeData.heroImage"
-            :src="$withBase(homeData.heroImage)"
+            :src="homeData.heroImage"
             :alt="homeData.heroAlt"
 						style="border-radius: 4px;"
           />
