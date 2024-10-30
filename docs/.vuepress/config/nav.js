@@ -8,6 +8,7 @@ module.exports = [
 		  {text: '工具', link:'/pages/aeb619/'},
 		  {text: 'Vue', link: '/pages/a0e944/'},
 			{text: 'js', link: '/pages/8fbca3/'},
+      {text: 'Vue3', link: '/pages/4d3e27/'}
 	  ]
   },
   {
